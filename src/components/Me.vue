@@ -88,4 +88,8 @@
   .about-list p{
     margin-top: 2px;
   }
+
+  .page-content{
+    margin-top: 0;
+  }
 </style>

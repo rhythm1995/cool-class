@@ -88,4 +88,8 @@
   .item-note-state i{
     font-size: 9px;
   }
+
+  .page-content{
+    margin-top: 0;
+  }
 </style>
