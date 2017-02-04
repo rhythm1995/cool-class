@@ -2,10 +2,12 @@
   <div class="page has-navbar" v-nav="{title: '个人信息', showBackButton: true}">
     <div class="page-content">
       <div class="list list-ios" thin-border>
-        <div class="item item-ios">
-          <p>{{name.key}}</p>
-          <p></p>
-        </div>
+        <ul class="item item-ios" v-for="meun in menus">
+          <li>
+            <span>111</span>
+            <span>111</span>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
