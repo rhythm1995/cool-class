@@ -2,10 +2,54 @@
   <div class="page has-navbar" v-nav="{title: '个人信息', showBackButton: true}">
     <div class="page-content">
       <div class="list list-ios" thin-border>
-        <ul class="item item-ios" v-for="meun in menus">
+        <ul class="item item-ios" v-for="menu in menus">
           <li>
-            <span>111</span>
-            <span>111</span>
+            <span class="me-information-list-left">{{menu.name.key}}</span>
+            <span class="me-information-list-right">{{menu.name.value}}</span>
+          </li>
+        </ul>
+        <ul class="item item-ios" v-for="menu in menus">
+          <li>
+            <span class="me-information-list-left">{{menu.photo.key}}</span>
+            <img src="{{menu.photo.value}}">
+          </li>
+        </ul>
+        <ul class="item item-ios" v-for="menu in menus">
+          <li>
+            <span class="me-information-list-left">{{menu.gender.key}}</span>
+            <span class="me-information-list-right">{{menu.gender.value}}</span>
+          </li>
+        </ul>
+        <ul class="item item-ios" v-for="menu in menus">
+          <li>
+            <span class="me-information-list-left">{{menu.email.key}}</span>
+            <span class="me-information-list-right">{{menu.email.value}}</span>
+          </li>
+        </ul>
+        <ul class="item item-ios" v-for="menu in menus">
+          <li>
+            <span class="me-information-list-left">{{menu.cellphone.key}}</span>
+            <span class="me-information-list-right">{{menu.cellphone.value}}</span>
+          </li>
+        </ul>
+        <ul class="item item-ios" v-for="menu in menus">
+          <li>
+            <span class="me-information-list-left">{{menu.address.key}}</span>
+            <span class="me-information-list-right">{{menu.address.value}}</span>
+          </li>
+        </ul>
+        <ul class="item item-ios" v-for="menu in menus">
+          <li>
+            <span class="me-information-list-left">{{menu.school.key}}</span>
+            <span class="me-information-list-right">{{menu.school.value}}</span>
+          </li>
+        </ul>
+        <ul class="item item-ios" v-for="menu in menus">
+          <li>
+            <span class="me-information-list-left">{{menu.signature.key}}</span>
+          </li>
+          <li>
+            <span class="me-information-list-right">{{menu.signature.value}}</span>
           </li>
         </ul>
       </div>
@@ -21,24 +65,28 @@
                 menus: [
                     {
                         name:{
-                            key:'昵称',
+                            key:'用户名',
                             value:'Bugzhang'
-                        },
-                        email:{
-                            key:'邮箱',
-                            value:'nuptunee@gmail.com'
                         },
                         photo:{
                             key:'头像',
                             value:''
                         },
+                        cellphone:{
+                            key:'手机',
+                            value:'15675884010'
+                        },
                         gender:{
                             key:'性别',
                             value:'男'
                         },
+                        email:{
+                            key:'邮箱',
+                            value:'nuptunee@gmail.com'
+                        },
                         school:{
                             key:'学校',
-                            value:'csu'
+                            value:'中南大学'
                         },
                         address:{
                             key:'地区',
@@ -55,54 +103,14 @@
     }
 </script>
 <style>
-  .page-content{
-    background-color: #fff;
-    margin: 30px auto;
-    margin-top: 0;
+  .me-information-list-left{
+    float: left;
+
+  }
+
+  .me-information-list-right{
+    float: right;
     position: relative;
-    font-family: '-apple-system', "Helvetica Neue", "Roboto", "Segoe UI", sans-serif;
-    color: #fff;
-    font-size: 14px;
-    font-weight: 100;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-  }
-
-  .page-content .header-topic{
-    padding-top: 20px;
-    font-size: 32px;
-    padding-left: 5%;
-    padding-right: 5%;
-    line-height:40px;
-  }
-
-  .page-content .header-small-topic{
-    float: right;
-    font-size: 14px;
-    padding-left: 5%;
-    padding-right: 5%;
-    line-height:40px;
-  }
-
-  .me-aboutMe-header{
-    background-color: #3f51b5;
-    height:125px;
-  }
-
-  .me-aboutMe-content{
-    margin-top: 20px;
-  }
-  .me-aboutMe-content p{
-    margin-left: 10%;
-    margin-right: 10%;
-    color: #555;
-  }
-
-  .me-aboutMe-content-right{
-    float: right;
-    margin-right: 10%;
   }
 </style>
 

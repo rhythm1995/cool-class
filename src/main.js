@@ -8,6 +8,8 @@ import Search from './components/Search.vue'
 
 import aboutMe from './components/Me-aboutMe.vue'
 import about_information from './components/Me-information.vue'
+import about_information_change from './components/Me-information-change.vue'
+
 // Routes
 const routes = {
     '/': {
@@ -28,6 +30,10 @@ const routes = {
 
     '/about-information':{
         component:about_information
+    },
+
+    '/about-information-change':{
+        component:about_information_change
     }
 };
 
