@@ -6,7 +6,7 @@ import Index from './components/Index.vue'
 import About from './components/Me.vue'
 import Search from './components/Search.vue'
 
-import aboutMe from './components/me-aboutMe.vue'
+import aboutMe from './components/Me-aboutMe.vue'
 // Routes
 const routes = {
     '/': {

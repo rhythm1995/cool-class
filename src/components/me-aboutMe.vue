@@ -2,11 +2,18 @@
   <div class="page has-navbar" v-nav="{title: '关于我们', showBackButton: true}">
     <div class="page-content">
       <div class="me-aboutMe-header">
-        <p class="header-topic">关于酷客，关于我们</p>
+        <p class="header-topic">关于酷课，关于我们</p>
         <p class="header-small-topic">Nero.Yang，Bugzhang，Justzht</p>
       </div>
       <div class="me-aboutMe-content">
-        <p>Note this is just an effect demo - there are of course many additional details if you want to use this in production, e.g. handling responsive sizes, reload threshold and content scrolling. Those are out of scope for this quick little hack. However, the idea is that you can hide them as internal details of a Vue.js component and expose a simple Web-Component-like interface.</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;酷课起先诞生于一个玩笑中，因为Justzht与我曾经因为翘课被教（PI）育(DOU)，又考虑到大四整一年将不准备呆在学校，所以萌生出开发一款代课应用的想法。17年春节后我们有两周闲暇的时间，于是完成了初步开发。</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;项目主要采用java+mysql+vue.js构建，然后通过原生封装做出的混合应用。我们使用了自己开发的一套SOA分布式框架Kitten，这个框架开源在：https://github.com/nerososft/kitten。前端项目开源在：https://github.com/rhythm1995/cool-class。如果你喜欢我们的应用希望能给予star，使用过程有bug请提出issue，我们会尽快修改。</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;希望大家能喜欢。</p>
+        <div class="me-aboutMe-content-right">
+          <p>后端开发：Nero.Yang</p>
+          <p>前端开发：Bugzhang</p>
+          <p>移动端开发：Justzht</p>
+        </div>
       </div>
     </div>
   </div>
@@ -57,7 +64,17 @@
     height:125px;
   }
 
+  .me-aboutMe-content{
+    margin-top: 20px;
+  }
   .me-aboutMe-content p{
-    color: #222;
+    margin-left: 10%;
+    margin-right: 10%;
+    color: #555;
+  }
+
+  .me-aboutMe-content-right{
+    float: right;
+    margin-right: 10%;
   }
 </style>

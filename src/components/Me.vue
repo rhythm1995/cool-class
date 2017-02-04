@@ -55,19 +55,19 @@
                         iconOn: 'ion-ios-home',
                         iconOff: 'ion-ios-home-outline',
                         text: '首页',
-                        path: '/advanced/tabbar/home'
+                        path: '/'
                     },
                     {
                         iconOn: 'ion-ios-upload',
                         iconOff: 'ion-ios-upload-outline',
                         text: '发布',
-                        path: '/advanced/tabbar/issue'
+                        path: '/issue'
                     },
                     {
                         iconOn: 'ion-ios-person',
                         iconOff: 'ion-ios-person-outline',
                         text: '我的',
-                        path: '/advanced/tabbar/user'
+                        path: '/me'
                     }
                 ]
             }
