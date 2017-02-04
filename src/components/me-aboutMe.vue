@@ -57,4 +57,7 @@
     height:125px;
   }
 
+  .me-aboutMe-content p{
+    color: #222;
+  }
 </style>
