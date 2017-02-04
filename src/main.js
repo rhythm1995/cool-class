@@ -7,22 +7,27 @@ import About from './components/Me.vue'
 import Search from './components/Search.vue'
 
 import aboutMe from './components/Me-aboutMe.vue'
+import about_information from './components/Me-information.vue'
 // Routes
 const routes = {
     '/': {
-      component:Index
+        component:Index
     },
 
     '/me': {
-      component:About
+        component:About
     },
 
     '/search':{
-      component:Search
+        component:Search
     },
     //about-route
     '/about-me':{
-      component:aboutMe
+        component:aboutMe
+    },
+
+    '/about-information':{
+        component:about_information
     }
 };
 

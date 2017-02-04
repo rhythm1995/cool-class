@@ -14,7 +14,7 @@
 
       <div class="about-list">
         <div class="item item-icon-left thin-border item-icon-right">
-          <p>我的资料</p>
+          <p>个人信息</p>
           <i class="icon ion-person balanced icon-left"></i>
           <i class="icon ion-ios-arrow-right"></i>
         </div>
