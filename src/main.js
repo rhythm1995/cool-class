@@ -5,6 +5,7 @@ import Vonic from 'vonic'
 import Index from './components/Index.vue'
 import About from './components/Me.vue'
 import Search from './components/Search.vue'
+import Issue from './components/Issue.vue'
 
 import me_aboutMe from './components/Me-aboutMe.vue'
 import me_information from './components/Me-information.vue'
@@ -25,6 +26,11 @@ const routes = {
     '/search':{
         component:Search
     },
+    //issue-route
+    '/issue':{
+        component:Issue
+    },
+
     //about-route
     '/me-about':{
         component:me_aboutMe
