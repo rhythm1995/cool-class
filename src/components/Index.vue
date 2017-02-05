@@ -8,7 +8,7 @@
         <div class="list list-ios" thin-border>
           <div class="item item-avatar item-ios">
             <div class="title">
-              带上数电课
+              代上数电课
             </div>
             <div class="item-note">
               bugzhang
@@ -46,7 +46,7 @@
                         path: '/'
                     },
                     {
-                        iconOn: 'ion-ios-upload',
+                        iconOn: 'ion-ios-issue',
                         iconOff: 'ion-ios-upload-outline',
                         text: '发布',
                         path: '/issue'

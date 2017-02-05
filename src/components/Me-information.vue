@@ -4,49 +4,73 @@
       <div class="list list-ios" thin-border>
         <ul class="item item-ios" v-for="menu in menus">
           <li>
-            <span class="me-information-list-left">{{menu.name.key}}</span>
+            <span class="me-information-list-left">
+              <i class="icon ion-android-person positive"></i>
+              {{menu.name.key}}
+            </span>
             <span class="me-information-list-right">{{menu.name.value}}</span>
           </li>
         </ul>
         <ul class="item item-ios" v-for="menu in menus">
           <li>
-            <span class="me-information-list-left">{{menu.photo.key}}</span>
+            <span class="me-information-list-left">
+              <i class="icon ion-android-image assertive"></i>
+              {{menu.photo.key}}
+            </span>
             <img src="{{menu.photo.value}}">
           </li>
         </ul>
         <ul class="item item-ios" v-for="menu in menus">
           <li>
-            <span class="me-information-list-left">{{menu.gender.key}}</span>
+            <span class="me-information-list-left">
+              <i class="icon ion-android-contacts energized"></i>
+              {{menu.gender.key}}
+            </span>
             <span class="me-information-list-right">{{menu.gender.value}}</span>
           </li>
         </ul>
         <ul class="item item-ios" v-for="menu in menus">
           <li>
-            <span class="me-information-list-left">{{menu.email.key}}</span>
+            <span class="me-information-list-left">
+              <i class="icon ion-android-drafts balanced"></i>
+              {{menu.email.key}}
+            </span>
             <span class="me-information-list-right">{{menu.email.value}}</span>
           </li>
         </ul>
         <ul class="item item-ios" v-for="menu in menus">
           <li>
-            <span class="me-information-list-left">{{menu.cellphone.key}}</span>
+            <span class="me-information-list-left">
+              <i class="icon ion-android-phone-portrait energized"></i>
+              {{menu.cellphone.key}}
+            </span>
             <span class="me-information-list-right">{{menu.cellphone.value}}</span>
           </li>
         </ul>
         <ul class="item item-ios" v-for="menu in menus">
           <li>
-            <span class="me-information-list-left">{{menu.address.key}}</span>
+            <span class="me-information-list-left">
+              <i class="icon ion-android-globe positive"></i>
+              {{menu.address.key}}
+            </span>
             <span class="me-information-list-right">{{menu.address.value}}</span>
           </li>
         </ul>
         <ul class="item item-ios" v-for="menu in menus">
           <li>
-            <span class="me-information-list-left">{{menu.school.key}}</span>
+            <span class="me-information-list-left">
+              <i class="icon ion-android-compass balanced"></i>
+              {{menu.school.key}}
+            </span>
             <span class="me-information-list-right">{{menu.school.value}}</span>
           </li>
         </ul>
         <ul class="item item-ios" v-for="menu in menus">
           <li>
-            <span class="me-information-list-left">{{menu.signature.key}}</span>
+            <span class="me-information-list-left">
+              <i class="icon ion-android-create assertive"></i>
+              {{menu.signature.key}}
+            </span>
           </li>
           <li>
             <span class="me-information-list-right">{{menu.signature.value}}</span>
@@ -105,12 +129,15 @@
 <style>
   .me-information-list-left{
     float: left;
-
   }
 
   .me-information-list-right{
     float: right;
     position: relative;
+  }
+
+  ul .icon{
+    font-size: 16px;
   }
 </style>
 

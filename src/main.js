@@ -24,15 +24,15 @@ const routes = {
         component:Search
     },
     //about-route
-    '/about-me':{
+    '/me-about':{
         component:aboutMe
     },
 
-    '/about-information':{
+    '/me-information':{
         component:about_information
     },
 
-    '/about-information-change':{
+    '/me-information-change':{
         component:about_information_change
     }
 };
