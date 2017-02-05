@@ -1,5 +1,5 @@
 <template>
-    <div class="page has-navbar" v-nav="{title: '注册', showBackButton: true}">
+    <div class="page has-navbar" v-nav="{title: '注册'}">
         <div class="page-content padding-top">
             <div class="item item-divider">请填写以下基本信息注册酷课:</div>
             <von-input

@@ -1,5 +1,5 @@
 <template>
-    <div class="page has-navbar" v-nav="{title: '发布', showBackButton: true}">
+    <div class="page has-navbar" v-nav="{title: '发布'}">
         <div class="page-content padding-top">
             <div class="item item-divider">发布一个需求:</div>
             <von-input

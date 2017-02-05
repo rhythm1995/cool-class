@@ -1,5 +1,5 @@
 <template>
-    <div class="page has-navbar" v-nav="{title: '登录', showBackButton: true}">
+    <div class="page has-navbar" v-nav="{title: '登录'}">
         <div class="page-content padding-top">
             <von-input
                     type="tel"
