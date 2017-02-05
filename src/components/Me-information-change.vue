@@ -64,12 +64,19 @@
                 :data="cities"
                 :value.sync="value">
         </cascade>
+        <md-button class="button button-balanced" @click="clicked()">
+          确认修改
+        </md-button>
       </div>
+
     </div>
   </div>
 </template>
-
-
+<style>
+  .page-content .button{
+    left: 30%;
+  }
+</style>
 <script>
     export default {
         data(){
@@ -77,7 +84,7 @@
                 menus: [
                     {
                         name:{
-                            key:'昵称',
+                            key:'用户名',
                             value:'Bugzhang'
                         },
                         photo:{
@@ -275,8 +282,6 @@
         }
     }
 </script>
-<style>
 
-</style>
 
 

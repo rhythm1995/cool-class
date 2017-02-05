@@ -6,9 +6,11 @@ import Index from './components/Index.vue'
 import About from './components/Me.vue'
 import Search from './components/Search.vue'
 
-import aboutMe from './components/Me-aboutMe.vue'
-import about_information from './components/Me-information.vue'
-import about_information_change from './components/Me-information-change.vue'
+import me_aboutMe from './components/Me-aboutMe.vue'
+import me_information from './components/Me-information.vue'
+import me_information_change from './components/Me-information-change.vue'
+import me_help from './components/Me-help.vue'
+import me_feedback from './components/Me-feedback.vue'
 
 // Routes
 const routes = {
@@ -25,15 +27,23 @@ const routes = {
     },
     //about-route
     '/me-about':{
-        component:aboutMe
+        component:me_aboutMe
+    },
+
+    '/me-help':{
+        component:me_help
+    },
+
+    '/me-feedback':{
+        component:me_feedback
     },
 
     '/me-information':{
-        component:about_information
+        component:me_information
     },
 
     '/me-information-change':{
-        component:about_information_change
+        component:me_information_change
     }
 };
 
