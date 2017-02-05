@@ -1,118 +1,85 @@
 <template>
-  <div class="page has-navbar" v-nav="{title: '编辑个人信息', showBackButton: true}">
-    <div class="page-content">
-      <div>
-        <div class="item item-divider">
-          填写您的基本信息：
+    <div class="page has-navbar" v-nav="{title: '注册', showBackButton: true}">
+        <div class="page-content padding-top">
+            <div class="item item-divider">请填写以下基本信息注册酷课:</div>
+            <von-input
+                    type="tel"
+                    :value.sync="cellphone"
+                    placeholder="请输入手机号码"
+                    label="手机号码："
+                    floating-label="true">
+            </von-input>
+            <von-input
+                    type="text"
+                    :value.sync="username"
+                    placeholder="请输入用户名"
+                    label="用户名："
+                    floating-label="true">
+            </von-input>
+            <von-input
+                    type="text"
+                    :value.sync="password"
+                    placeholder="请输入你的密码"
+                    label="输入密码："
+                    floating-label="true">
+            </von-input>
+            <von-input
+                    type="text"
+                    :value.sync="confirmPassword"
+                    placeholder="请确认您的密码"
+                    label="确认密码："
+                    floating-label="true">
+            </von-input>
+            <div>
+                <div class="item item-divider">
+                    选择你的性别:
+                </div>
+                <von-radio :options="requireOptions" :value.sync="require"></von-radio>
+            </div>
+            <div>
+                <div class="item item-divider">
+                    选择您所属的行政区划：
+                </div>
+                <cascade
+                        :fields="fields"
+                        :data="cities"
+                        :value.sync="value">
+                </cascade>
+            </div>
+            <von-input
+                    type="text"
+                    :value.sync="verificationCode"
+                    placeholder="请输入验证码"
+                    label="输入验证码："
+                    floating-label="true">
+            </von-input>
+            <md-button class="button button-assertive" @click="clicked()">
+                发送验证码
+            </md-button>
+            <md-button class="button button-positive" @click="clicked()">
+                注册酷课
+            </md-button>
         </div>
-        <von-input
-                type="text"
-                :value.sync="username"
-                label="用户名"
-                placeholder="用户名"
-        >
-        </von-input>
-        <von-input
-                type="password"
-                :value.sync="password"
-                label="密码"
-                placeholder="密码"
-        >
-        </von-input>
-
-        <von-input
-                type="email"
-                :value.sync="email"
-                label="E-mail"
-                placeholder="E-mail"
-        >
-        </von-input>
-        <von-input
-                type="tel"
-                :value.sync="tel"
-                label="手机号"
-                placeholder="手机号"
-        >
-        </von-input>
-        <von-input
-                type="text"
-                :value.sync="school"
-                label="所在院校"
-                placeholder="所在院校"
-        >
-        </von-input>
-        <von-input
-                type="text"
-                :value.sync="signature"
-                label="个性签名"
-                placeholder="个性签名"
-        >
-        </von-input>
-      </div>
-      <div>
-        <div class="item item-divider">
-          请选择您的性别:
-        </div>
-        <von-radio :options="genderOptions" :value.sync="gender"></von-radio>
-      </div>
-      <div>
-        <div class="item item-divider">
-          选择您所属的行政区划：
-        </div>
-        <cascade
-                :fields="fields"
-                :data="cities"
-                :value.sync="value">
-        </cascade>
-        <md-button class="button button-balanced" @click="clicked()">
-          确认修改
-        </md-button>
-      </div>
-
     </div>
-  </div>
 </template>
 <style>
-  .page-content .button{
-    left: 30%;
-  }
+    .page-content button{
+        margin-left: -20%;
+    }
+
+    .page-content .button-positive{
+        margin-left: 10%;
+    }
 </style>
 <script>
-    export default {
+    export default{
         data(){
             return {
-                menus: [
-                    {
-                        name:{
-                            key:'用户名',
-                            value:'Bugzhang'
-                        },
-                        photo:{
-                            key:'头像',
-                            value:''
-                        },
-                        gender:{
-                            key:'性别',
-                            value:'男'
-                        },
-                        email:{
-                            key:'邮箱',
-                            value:'nuptunee@gmail.com'
-                        },
-                        school:{
-                            key:'学校',
-                            value:'中南大学'
-                        },
-                        address:{
-                            key:'地区',
-                            value:'湖南 长沙'
-                        },
-                        signature:{
-                            key:'个性签名',
-                            value:'头像是我老婆'
-                        }
-                    }
-                ],
+                issueName: '',
+                issueMoney: '',
+                issueDescription: '',
+                require: 0,
+                requireOptions: ["男", "女"],
 
                 fields: [
                     "省", "市", "区"
@@ -123,13 +90,13 @@
                     ['湖南省','市辖区','天心区'],
                     ['湖南省','市辖区','开福区'],
                     ['湖南省','市辖区','雨花区'],
-                    ['湖南省','市辖县','长沙县'],
-                    ['湖南省','市辖县','星沙镇'],
-                    ['湖南省','市辖县','望城县'],
-                    ['湖南省','市辖县','高塘岭镇'],
-                    ['湖南省','市辖县','宁乡县'],
-                    ['湖南省','市辖县','玉潭镇'],
-                    ['湖南省','市辖县','浏阳市'],
+                    ['湖南省','县','长沙县'],
+                    ['湖南省','县','星沙镇'],
+                    ['湖南省','县','望城县'],
+                    ['湖南省','县','高塘岭镇'],
+                    ['湖南省','县','宁乡县'],
+                    ['湖南省','县','玉潭镇'],
+                    ['湖南省','县','浏阳市'],
                     ['天津市','市辖区','南开区'],
                     ['天津市','市辖区','和平区'],
                     ['天津市','市辖区','河东区'],
@@ -145,10 +112,10 @@
                     ['天津市','市辖区','北辰区'],
                     ['天津市','市辖区','武清区'],
                     ['天津市','市辖区','宝坻区'],
-                    ['天津市','市辖县','蓟县'],
-                    ['天津市','市辖县','宁河县'],
-                    ['天津市','市辖县','芦台镇'],
-                    ['天津市','市辖县','静海县'],
+                    ['天津市','县','蓟县'],
+                    ['天津市','县','宁河县'],
+                    ['天津市','县','芦台镇'],
+                    ['天津市','县','静海县'],
                     ['北京市', '市辖区', '东城区'],
                     ['北京市', '市辖区', '西城区'],
                     ['北京市', '市辖区', '朝阳区'],
@@ -163,8 +130,8 @@
                     ['北京市', '市辖区', '大兴区'],
                     ['北京市', '市辖区', '怀柔区'],
                     ['北京市', '市辖区', '平谷区'],
-                    ['北京市', '市辖县', '密云县'],
-                    ['北京市', '市辖县', '延庆县'],
+                    ['北京市', '县', '密云县'],
+                    ['北京市', '县', '延庆县'],
                     ['上海市', '市辖区', '黄浦区'],
                     ['上海市', '市辖区', '徐汇区'],
                     ['上海市', '市辖区', '长宁区'],
@@ -181,7 +148,7 @@
                     ['上海市', '市辖区', '松江区'],
                     ['上海市', '市辖区', '青浦区'],
                     ['上海市', '市辖区', '奉贤区'],
-                    ['上海市', '市辖县', '崇明县'],
+                    ['上海市', '县', '崇明县'],
                     ['浙江省', '杭州市', '上城区'],
                     ['浙江省', '杭州市', '下城区'],
                     ['浙江省', '杭州市', '江干区'],
@@ -274,14 +241,8 @@
                     ['浙江省', '丽水市', '景宁畲族自治县'],
                     ['浙江省', '丽水市', '龙泉市']
                 ],
-                value: [],
-
-                gender: 0,
-                genderOptions: ["男", "女"]
+                value: []
             }
         }
     }
 </script>
-
-
-

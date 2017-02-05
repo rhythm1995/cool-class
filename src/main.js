@@ -6,6 +6,8 @@ import Index from './components/Index.vue'
 import About from './components/Me.vue'
 import Search from './components/Search.vue'
 import Issue from './components/Issue.vue'
+import Login from './components/Login.vue'
+import Register from './components/Register.vue'
 
 import me_aboutMe from './components/Me-aboutMe.vue'
 import me_information from './components/Me-information.vue'
@@ -15,8 +17,16 @@ import me_feedback from './components/Me-feedback.vue'
 
 // Routes
 const routes = {
-    '/': {
+    '/':{
         component:Index
+    },
+
+    '/register': {
+        component:Register
+    },
+
+    '/login':{
+        component:Login
     },
 
     '/me': {
